@@ -3,13 +3,13 @@ import os
 import pyodbc
 
 app = Flask(__name__)
-server = 'sqlservergiy6qzboazqik.database.windows.net'
+server = 'reg-students-server.database.windows.net'
 driver = '{ODBC Driver 18 for SQL Server}'
 
 
 database='sampledb';
-Uid='cloudadmin';
-Pwd='CloudProject132';
+Uid='admin';
+Pwd='Rishav17sh';
 Encrypt='yes';
 TrustServerCertificate='no';
 
@@ -35,3 +35,4 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
