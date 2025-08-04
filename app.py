@@ -7,7 +7,7 @@ server = 'reg-students-server.database.windows.net'
 driver = '{ODBC Driver 18 for SQL Server}'
 
 
-database='sampledb';
+database='reg-students-database';
 Uid='reg-students-server-admin';
 Pwd='Rishav17sh';
 Encrypt='yes';
@@ -35,5 +35,6 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
