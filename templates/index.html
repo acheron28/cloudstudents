@@ -2,14 +2,122 @@
 <html>
 <head>
     <title>Student Registration</title>
+    <style>
+        /* General body styling for background and layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            /* Background image with cover and center positioning */
+            background-image: url('https://image.pollinations.ai/prompt/soft%20blurred%20books%20background');
+            background-size: cover;
+            background-position: center;
+            
+            /* Flexbox to center the form vertically and horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* Add some padding for smaller screens */
+        }
+
+        /* Form container styling */
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for a "frosted glass" effect */
+            padding: 40px;
+            border-radius: 12px;
+            
+            /* 3D-like box-shadow for depth and lift */
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+            
+            width: 350px;
+            max-width: 90%; /* Ensure responsiveness on smaller screens */
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Spacing for each form group (label + input) */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Styling for text and email input fields */
+        input.styled-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Focus effect for input fields */
+        input.styled-input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Styling for the submit button */
+        input.submit-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Hover and active effects for the button */
+        input.submit-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Lift button on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input.submit-button:active {
+            transform: translateY(0); /* Push button down on click */
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
-    <h2>Register Student</h2>
     <form action="/register" method="post">
-        First Name: <input type="text" name="first"><br>
-        Last Name: <input type="text" name="last"><br>
-        Email: <input type="email" name="email"><br>
-        <input type="submit" value="Register">
+        <h2>Student Registration</h2>
+
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="first" required class="styled-input">
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="last" required class="styled-input">
+        </div>
+
+        <div class="form-group">
+            <label for="emailAddress">Email</label>
+            <input type="email" id="emailAddress" name="email" required class="styled-input">
+        </div>
+        
+        <input type="submit" value="Register" class="submit-button">
     </form>
 </body>
 </html>
