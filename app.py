@@ -8,7 +8,7 @@ driver = '{ODBC Driver 18 for SQL Server}'
 
 
 database='sampledb';
-Uid='admin';
+Uid='reg-students-server-admin';
 Pwd='Rishav17sh';
 Encrypt='yes';
 TrustServerCertificate='no';
@@ -35,4 +35,5 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
